@@ -1,4 +1,4 @@
 
-public interface CarElement {
-    void accept(CarElementVisitor visitor);
+public abstract class CarElement {
+    abstract void accept(CarElementVisitor visitor);
 }

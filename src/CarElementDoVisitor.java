@@ -1,21 +1,46 @@
-public class CarElementDoVisitor implements CarElementVisitor {
+public class CarElementDoVisitor extends CarElementVisitor {
     @Override
+    void visitBody(CarElement element) {
+        Body body = (Body) element;
+        body.operateBody();
+    }
+
+    @Override
+    void visitEngine(CarElement element) {
+        Engine engine = (Engine) element;
+        engine.operateEngine();
+    }
+
+    @Override
+    void visitWheel(CarElement element) {
+        Wheel wheel = (Wheel) element;
+        wheel.operateWheel();
+    }
+
+    @Override
+    void visitCar(CarElement element) {
+        Car car = (Car) element;
+        car.operateCar();
+    }
+
+    /*
     public void visit(Body body) {
-        System.out.println("Moving my body");
+        body.operateBody();
     }
 
     @Override
     public void visit(Car car) {
-        System.out.println("Starting my car");
+        car.operateCar();
     }
 
     @Override
     public void visit(Wheel wheel) {
-        System.out.println("Kicking my " + wheel.getName() + " wheel");
+        wheel.operateWheel();
     }
 
     @Override
     public void visit(Engine engine) {
-        System.out.println("Starting my engine");
+        engine.operateEngine();
     }
+    */
 }

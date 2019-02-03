@@ -1,21 +1,27 @@
-public class CarElementPrintVisitor implements CarElementVisitor {
+public class CarElementPrintVisitor extends CarElementVisitor {
+
     @Override
-    public void visit(Body body) {
-        System.out.println("Visiting body");
+    void visitBody(CarElement element) {
+        Body body = (Body) element;
+        body.printBody();
     }
 
     @Override
-    public void visit(Car car) {
-        System.out.println("Visiting car");
+    void visitEngine(CarElement element) {
+        Engine engine = (Engine) element;
+        engine.printeEngine();
     }
 
     @Override
-    public void visit(Engine engine) {
-        System.out.println("Visiting engine");
+    void visitWheel(CarElement element) {
+        Wheel wheel = (Wheel) element;
+        wheel.printWheel();
     }
 
     @Override
-    public void visit(Wheel wheel) {
-        System.out.println("Visiting " + wheel.getName() + " wheel");
+    void visitCar(CarElement element) {
+        Car car = (Car) element;
+        car.printCar();
     }
+
 }

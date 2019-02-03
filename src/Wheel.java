@@ -1,4 +1,4 @@
-public class Wheel implements CarElement {
+public class Wheel extends CarElement {
     private final String name;
 
     public Wheel(final String name) {
@@ -23,6 +23,13 @@ public class Wheel implements CarElement {
          * another decision that is made at run time. This can be
          * considered the *second* dispatch.
          */
-        visitor.visit(this);
+        visitor.visitWheel(this);
+    }
+
+    public void operateWheel() {
+        System.out.println("operate wheel: " + name);
+    }
+    public void printWheel() {
+        System.out.println("print wheel: " + name);
     }
 }

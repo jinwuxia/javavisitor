@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Car implements CarElement {
+public class Car extends CarElement {
     private final List<CarElement> elements = new ArrayList<>();
 
     public Car() {
@@ -15,9 +15,14 @@ public class Car implements CarElement {
 
     @Override
     public void accept(CarElementVisitor visitor) {
-        for (CarElement element : elements) {
-            element.accept(visitor);
-        }
-        visitor.visit(this);
+        visitor.visitCar(this);
+    }
+
+    public void operateCar() {
+
+        System.out.println("operate car.");
+    }
+    public void printCar() {
+        System.out.println("print car.");
     }
 }
