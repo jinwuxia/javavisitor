@@ -7,7 +7,11 @@ public class Engine extends CarElement{
     public void operateEngine() {
         System.out.println("operate engine.");
     }
-    public void printeEngine() {
+
+    public void printEngine() {
         System.out.println("print engine.");
     }
+
+    public void getEngine() {}
+
 }

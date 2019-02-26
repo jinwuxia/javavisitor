@@ -1,27 +1,23 @@
 public class CarElementPrintVisitor extends CarElementVisitor {
 
     @Override
-    void visitBody(CarElement element) {
-        Body body = (Body) element;
-        body.printBody();
+    void visitBody(Body element) {
+        element.printBody();
     }
 
     @Override
-    void visitEngine(CarElement element) {
-        Engine engine = (Engine) element;
-        engine.printeEngine();
+    void visitEngine(Engine element) {
+        element.printEngine();
     }
 
     @Override
-    void visitWheel(CarElement element) {
-        Wheel wheel = (Wheel) element;
-        wheel.printWheel();
+    void visitWheel(Wheel element) {
+        element.printWheel();
     }
 
     @Override
-    void visitCar(CarElement element) {
-        Car car = (Car) element;
-        car.printCar();
+    void visitCar(Car element) {
+        element.printCar();
     }
 
 }

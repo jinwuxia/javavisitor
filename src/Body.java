@@ -7,7 +7,10 @@ public class Body extends CarElement {
     public void operateBody() {
         System.out.println("operate body");
     }
+
     public void printBody() {
         System.out.println("print body.");
     }
+
+    public void getBody() {}
 }

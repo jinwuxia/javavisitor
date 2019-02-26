@@ -16,6 +16,7 @@ public class Car extends CarElement {
     @Override
     public void accept(CarElementVisitor visitor) {
         visitor.visitCar(this);
+
     }
 
     public void operateCar() {
@@ -25,4 +26,7 @@ public class Car extends CarElement {
     public void printCar() {
         System.out.println("print car.");
     }
+
+    public void getCar() {}
+
 }

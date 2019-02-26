@@ -29,7 +29,11 @@ public class Wheel extends CarElement {
     public void operateWheel() {
         System.out.println("operate wheel: " + name);
     }
+
     public void printWheel() {
         System.out.println("print wheel: " + name);
     }
+
+    public void getWheel() {}
+
 }

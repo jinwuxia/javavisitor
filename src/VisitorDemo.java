@@ -5,15 +5,17 @@ public class VisitorDemo {
         Wheel wheel = new Wheel("front");
         CarElement car = new Car();
 
-        body.accept(new CarElementDoVisitor());
-        engine.accept(new CarElementDoVisitor());
-        wheel.accept(new CarElementDoVisitor());
-        car.accept(new CarElementDoVisitor());
+        CarElementVisitor visitor1 = new CarElementDoVisitor();
+        body.accept(visitor1);
+        engine.accept(visitor1);
+        wheel.accept(visitor1);
+        car.accept(visitor1);
 
-        body.accept(new CarElementPrintVisitor());
-        engine.accept(new CarElementPrintVisitor());
-        wheel.accept(new CarElementPrintVisitor());
-        car.accept(new CarElementPrintVisitor());
+        CarElementVisitor visitor2 = new CarElementPrintVisitor();
+        body.accept(visitor2);
+        engine.accept(visitor2);
+        wheel.accept(visitor2);
+        car.accept(visitor2);
 
     }
 }

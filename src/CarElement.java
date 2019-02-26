@@ -1,4 +1,7 @@
 
-public abstract class CarElement {
-    abstract void accept(CarElementVisitor visitor);
+public  class CarElement {
+     public void accept(CarElementVisitor visitor) {
+         visitor.tranverse();
+     }
+
 }

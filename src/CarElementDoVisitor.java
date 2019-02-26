@@ -1,26 +1,22 @@
 public class CarElementDoVisitor extends CarElementVisitor {
     @Override
-    void visitBody(CarElement element) {
-        Body body = (Body) element;
-        body.operateBody();
+    void visitBody(Body element) {
+        element.operateBody();
     }
 
     @Override
-    void visitEngine(CarElement element) {
-        Engine engine = (Engine) element;
-        engine.operateEngine();
+    void visitEngine(Engine element) {
+        element.operateEngine();
     }
 
     @Override
-    void visitWheel(CarElement element) {
-        Wheel wheel = (Wheel) element;
-        wheel.operateWheel();
+    void visitWheel(Wheel element) {
+        element.operateWheel();
     }
 
     @Override
-    void visitCar(CarElement element) {
-        Car car = (Car) element;
-        car.operateCar();
+    void visitCar(Car element) {
+        element.operateCar();
     }
 
     /*
