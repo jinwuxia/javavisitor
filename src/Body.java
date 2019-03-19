@@ -1,4 +1,5 @@
 public class Body extends CarElement {
+	
     @Override
     public void accept(CarElementVisitor visitor) {
         visitor.visitBody(this);
